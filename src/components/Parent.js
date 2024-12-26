@@ -4,12 +4,12 @@ import {useState} from 'react';
 
 export const Parent = () => {
 
-    const [todos, setTodos]=useState([['Learn React',false],['Build a react app',false],['Deploy the React App',false]]);
+    const [todos, setTodos]=useState([{task: 'Learn React',complete: false},{task: 'Build a react app',complete: false},{task: 'Deploy the React App',complete: false}]);
 
     const handleComplete=(itemvalue)=>
     {
        
-        let newtodolist=todos.map((item)=> {if(item[0]===itemvalue){return [item[0],true]} else{return item}});
+        let newtodolist=todos.map((item)=> {if(item.task===itemvalue){return {task: item.task, complete: true}} else{return item}});
 
         setTodos(newtodolist);
     }
