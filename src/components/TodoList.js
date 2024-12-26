@@ -11,7 +11,7 @@ export const TodoList = ({todos, handleComplete}) => {
         <ul>
        
        {
-        todos.map((item, index)=> <li key={index}>{item.task} {!item.complete && <button onClick={()=>handleComplete(item.task)}>Complete</button>}</li>)
+        todos.map((item, index)=> <div key={index}><li >{item.task} </li> {!item.complete && <button onClick={()=>handleComplete(item.task)}>Complete</button>}</div>)
        }
     
         </ul>
