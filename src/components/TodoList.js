@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Child = ({todos, handleComplete}) => {
+export const TodoList = ({todos, handleComplete}) => {
 
 
 
