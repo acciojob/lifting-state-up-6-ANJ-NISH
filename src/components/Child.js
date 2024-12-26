@@ -11,7 +11,7 @@ export const Child = ({todos, handleComplete}) => {
         <ul>
        
        {
-        todos.map((item, index)=> <div key={index} style={{display: 'flex'}}><li>{item.task}</li> &nbsp;&nbsp; {!item.complete && <button onClick={()=>handleComplete(item.task)}>Complete</button>}</div>)
+        todos.map((item, index)=> <div key={index} style={{display: 'flex'}}><li>{item.task}</li>{!item.complete && <button onClick={()=>handleComplete(item.task)}>Complete</button>}</div>)
        }
     
         </ul>
